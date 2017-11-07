@@ -1,0 +1,9 @@
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\bin\Debug\EveTradingHelper.exe.config
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\bin\Debug\EveTradingHelper.exe
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\bin\Debug\EveTradingHelper.pdb
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.csprojResolveAssemblyReference.cache
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.Form1.resources
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.Properties.Resources.resources
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.csproj.GenerateResource.Cache
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.exe
+c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.pdb
