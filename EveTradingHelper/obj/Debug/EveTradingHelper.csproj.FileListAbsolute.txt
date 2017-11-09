@@ -1,9 +1,16 @@
 c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\bin\Debug\EveTradingHelper.exe.config
 c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\bin\Debug\EveTradingHelper.exe
 c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\bin\Debug\EveTradingHelper.pdb
-c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.csprojResolveAssemblyReference.cache
 c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.Form1.resources
 c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.Properties.Resources.resources
 c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.csproj.GenerateResource.Cache
 c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.exe
 c:\users\tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.pdb
+C:\Users\Tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\bin\Debug\EveTradingHelper.exe.manifest
+C:\Users\Tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\bin\Debug\EveTradingHelper.application
+C:\Users\Tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.exe.manifest
+C:\Users\Tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.application
+C:\Users\Tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.ImprovedSearchForm.resources
+C:\Users\Tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.SearchCondition.resources
+C:\Users\Tommy\Documents\Visual Studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.MiniatureOutput.resources
+C:\Users\Tommy\documents\visual studio 2015\Projects\EveTradingHelper\EveTradingHelper\obj\Debug\EveTradingHelper.csprojResolveAssemblyReference.cache

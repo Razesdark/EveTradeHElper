@@ -39,5 +39,9 @@ namespace EveTradingHelper.Data.EVE
         {
             return GetList()[id];
         }
+        public static string[] GetAllNames()
+        {
+            return GetList().Values.ToArray<string>();
+        }
     }
 }

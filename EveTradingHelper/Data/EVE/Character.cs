@@ -33,5 +33,9 @@ namespace EveTradingHelper.Data.EVE
         {
             return Regions[id];
         }
+        public static string[] GetAllNames()
+        {
+            return Regions.Values.ToArray<string>();
+        }
     }
 }

@@ -25,13 +25,18 @@ namespace EveTradingHelper.Data.EVE
         }
         public static long Add(long id, string name)
         {
-            if(!Regions.Keys.Contains(id))
+            if (!Regions.Keys.Contains(id))
                 Regions.Add(id, name);
             return id;
         }
         public static string GetById(long id)
         {
             return Regions[id];
+        }
+
+        public static string[] GetAllNames()
+        {
+            return Regions.Values.ToArray<string>();
         }
     }
 }
