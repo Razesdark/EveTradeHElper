@@ -27,6 +27,7 @@ namespace EveTradingHelper
         /// </summary>
         public ImprovedSearchForm()
         {
+            Data.Order.Import();
             this.orders = new KeyValuePair<long, Data.Order>[0];
 
             InitializeComponent();
@@ -138,7 +139,7 @@ namespace EveTradingHelper
         {
             var delegates = this.searchOptions.Controls.OfType<SearchCondition>()
                 .Where( control => control.IsValidQuery)
-                .Select(control => control.GetDelegate()).ToArray();
+                .Select(control => control.GetPrediacte()).ToArray();
 
             
             orders = Data.Order.Orders.ToArray();

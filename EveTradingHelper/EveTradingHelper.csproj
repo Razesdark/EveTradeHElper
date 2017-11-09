@@ -107,6 +107,36 @@
     <Compile Include="SearchCondition.Designer.cs">
       <DependentUpon>SearchCondition.cs</DependentUpon>
     </Compile>
+    <Compile Include="SearchConditionTypes\BasePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\CharacterSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\IsActiveSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\MultipleOrdersInStationSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\NameSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\PricePercentage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\PriceSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\RegionSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\StationSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SearchConditionTypes\WasActiveAtSearch.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

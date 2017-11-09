@@ -20,7 +20,7 @@ namespace EveTradingHelper
             this.listView1.Columns.AddRange(Data.Order.GenerateMiniatureOutputHeaders());
 
             this.listView1.Sorting = SortOrder.Ascending;
-            Func <KeyValuePair<long, Data.Order>, bool> [] predicates = search.Select(s => s.GetDelegate()).ToArray();
+            Func <KeyValuePair<long, Data.Order>, bool> [] predicates = search.Select(s => s.GetPrediacte()).ToArray();
             KeyValuePair<long, Data.Order>[] orders = Data.Order.Orders.ToArray();
             foreach (Func<KeyValuePair<long, Data.Order>, bool> d in predicates)
                 orders = orders.Where(d).ToArray();
