@@ -38,14 +38,22 @@ namespace EveTradingHelper
             i.RedButtonClick += I_RedButtonClick;
             i.SearchFieldUpdatedEvent += I_SearchFieldUpdatedEvent;
             this.searchOptions.Controls.Add(i);
-
             UpdateAccordingToSearchParameters();
-            
             foreach(Control c in this.splitContainer1.Panel2.Controls.OfType<Control>().ToArray())
             {
                 c.Visible = false;
             }
 
+
+#if !DEBUG
+            foreach(ToolStripMenuItem t in
+            this.menuStrip1.Items.OfType<ToolStripMenuItem>()
+                .Where( mi => mi.Text.Equals("Debug Menu"))
+                .ToArray())
+            {
+                t.DisplayStyle = ToolStripItemDisplayStyle.None;
+            }    
+#endif
         }
 
         /// <summary>
@@ -116,7 +124,15 @@ namespace EveTradingHelper
         private void I_GreenButtonClick(SearchCondition sender, EventArgs e)
         {
             ((SearchCondition)sender).ToggleRedGreen();
-            SearchCondition i = new SearchCondition();
+            AddSearchCondition();
+
+        }
+
+
+        public void AddSearchCondition(string query=null)
+        {
+
+            SearchCondition i = query == null ? new SearchCondition() : new SearchCondition(query);
             i.Dock = DockStyle.Top;
             i.GreenButtonClick += I_GreenButtonClick;
             i.RedButtonClick += I_RedButtonClick;
@@ -129,7 +145,6 @@ namespace EveTradingHelper
 
             this.searchOptions.Controls.Clear();
             this.searchOptions.Controls.AddRange(newConditions.ToArray());
-
         }
 
         /// <summary>
@@ -208,6 +223,53 @@ namespace EveTradingHelper
             (new MiniatureOutput(this.searchOptions.Controls.OfType<SearchCondition>()
                 .Where(sc => sc.IsValidQuery)
                 .ToArray())).Show();
+        }
+
+        public void FromString(string fullQuery)
+        {
+            this.searchOptions.Controls.Clear();
+
+            string[] split = new string[] { "AND" };
+            foreach (string query in fullQuery.Split(split, StringSplitOptions.RemoveEmptyEntries))
+            {
+                this.AddSearchCondition(query.Trim());
+            }
+
+            foreach(SearchCondition e in this.searchOptions.Controls.OfType<SearchCondition>())
+            {
+                e.CurrentMode = SearchConditionStatusCode.Red;
+            }
+            this.searchOptions.Controls.OfType<SearchCondition>().First().CurrentMode = SearchConditionStatusCode.Green;
+            UpdateAccordingToSearchParameters();
+        }
+
+        private void fromStringToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.searchOptions.Controls.Clear();
+
+            string fullQuery = "Name includes 220mm AND IsActive is active";
+            string[] split = new string[] { "AND" };
+            foreach (string query in fullQuery.Split(split, StringSplitOptions.RemoveEmptyEntries))
+            {
+                this.AddSearchCondition(query.Trim());
+            }
+            UpdateAccordingToSearchParameters();
+
+        }
+
+        private void hevriceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.FromString("Station == Hevrice AND IsActive is active");
+        }
+
+        private void ordersRunningLowToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.FromString("OrderPercent <= 0,40 AND MultipleOrders does not have multiples");
+        }
+
+        private void toolStripTextBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -31,6 +31,11 @@ namespace EveTradingHelper.SearchConditionTypes
             return true;
         }
 
+        public override void FromString(string a)
+        {
+            this.cb.Checked = a.Equals("has multiple");
+        }
+
         public override Func<KeyValuePair<long, Order>, bool> GetPredicate()
         {
             return new Func<KeyValuePair<long, Order>, bool>(key => key.Value.HasMultipleOrdersInStation == this.cb.Checked);
@@ -38,7 +43,7 @@ namespace EveTradingHelper.SearchConditionTypes
 
         public override string ToString()
         {
-            return this.cb.Checked ? "is active" : "is not active";
+            return this.cb.Checked ? "has multiple" : "does not have multiples";
         }
     }
 }

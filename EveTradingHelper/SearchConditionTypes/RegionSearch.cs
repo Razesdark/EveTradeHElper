@@ -18,7 +18,6 @@ namespace EveTradingHelper.SearchConditionTypes
             cb = BasePanel.StandardComboBox(Data.EVE.Region.GetAllNames());
 
             cb.Dock = DockStyle.Fill;
-         
             cb.Margin = new Padding(0, 0, 10, 0);
 
             cb.TextChanged += TriggerAction;
@@ -35,6 +34,11 @@ namespace EveTradingHelper.SearchConditionTypes
         public override bool DataIsValid()
         {
             return this.cb.Text.Length > 0;
+        }
+
+        public override void FromString(string a)
+        {
+            throw new NotImplementedException();
         }
 
         public override Func<KeyValuePair<long, Order>, bool> GetPredicate()

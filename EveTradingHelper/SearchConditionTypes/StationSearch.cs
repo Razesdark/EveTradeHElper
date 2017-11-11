@@ -41,6 +41,12 @@ namespace EveTradingHelper.SearchConditionTypes
             return this.cb.Text.Length > 0;
         }
 
+        public override void FromString(string a)
+        {
+            this.cb.Items.Add(a.Replace("==", "").Trim());
+            this.cb.SelectedItem = a.Replace("==", "").Trim();
+        }
+
         public override Func<KeyValuePair<long, Order>, bool> GetPredicate()
         {
             return new Func<KeyValuePair<long, Order>, bool>(key => key.Value.Station.Contains(this.cb.Text));

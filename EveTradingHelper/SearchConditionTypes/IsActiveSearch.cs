@@ -31,6 +31,11 @@ namespace EveTradingHelper.SearchConditionTypes
             return true;
         }
 
+        public override void FromString(string a)
+        {
+            this.cb.Checked = a.Equals("is active");
+        }
+
         public override Func<KeyValuePair<long, Order>, bool> GetPredicate()
         {
             return new Func<KeyValuePair<long, Order>, bool>(key => key.Value.IsActive == this.cb.Checked);
@@ -40,5 +45,6 @@ namespace EveTradingHelper.SearchConditionTypes
         {
             return this.cb.Checked ? "is active" : "is not active";
         }
+
     }
 }

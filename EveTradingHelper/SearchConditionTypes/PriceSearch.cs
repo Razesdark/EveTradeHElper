@@ -52,6 +52,11 @@ namespace EveTradingHelper.SearchConditionTypes
             } catch { return false; }
         }
 
+        public override void FromString(string a)
+        {
+            throw new NotImplementedException();
+        }
+
         public override Func<KeyValuePair<long, Order>, bool> GetPredicate()
         {
             switch (this.cb.Text)

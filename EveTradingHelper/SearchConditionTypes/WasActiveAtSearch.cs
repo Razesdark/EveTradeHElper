@@ -28,6 +28,11 @@ namespace EveTradingHelper.SearchConditionTypes
             return this.dp.Value <= DateTime.Now;
         }
 
+        public override void FromString(string a)
+        {
+            throw new NotImplementedException();
+        }
+
         public override Func<KeyValuePair<long, Order>, bool> GetPredicate()
         {
             return new Func<KeyValuePair<long, Order>, bool>(order => order.Value.WasActive(this.dp.Value));

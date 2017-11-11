@@ -21,15 +21,14 @@ namespace EveTradingHelper.SearchConditionTypes
 
         }
 
-
         public abstract Func<KeyValuePair<long, Data.Order>, bool> GetPredicate();
         public abstract bool DataIsValid();
+        public abstract void FromString(string a);
         public abstract override string ToString();
-
-        public static ComboBox StandardComboBox(string[] arguments)
+        public static ComboBox StandardComboBox(string[] arguments, bool list=true)
         {
             ComboBox cb = new ComboBox();
-            cb.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb.DropDownStyle = list ? ComboBoxStyle.DropDownList : ComboBoxStyle.DropDown;
             cb.Items.AddRange(arguments);
 
             return cb;

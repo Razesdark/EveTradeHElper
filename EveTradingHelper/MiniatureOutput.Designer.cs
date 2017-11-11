@@ -69,7 +69,7 @@
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SizeChanged += new System.EventHandler(this.listView1_SizeChanged);
+            
             // 
             // MiniatureOutput
             // 
@@ -82,7 +82,7 @@
             this.Name = "MiniatureOutput";
             this.Text = "MiniatureOutput";
             this.TopMost = true;
-            this.SizeChanged += new System.EventHandler(this.MiniatureOutput_SizeChanged);
+            
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -62,6 +62,16 @@
             this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.debugMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fromStringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.hevriceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ordersRunningLowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.FreeQuery = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -372,7 +382,9 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.debugMenuToolStripMenuItem,
+            this.toolStripMenuItem3});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1436, 24);
@@ -422,6 +434,78 @@
             this.toolStripMenuItem2.Size = new System.Drawing.Size(157, 22);
             this.toolStripMenuItem2.Text = "&Separate Report";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.CreateMiniatureOutputWindow);
+            // 
+            // debugMenuToolStripMenuItem
+            // 
+            this.debugMenuToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.debugMenuToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fromStringToolStripMenuItem});
+            this.debugMenuToolStripMenuItem.Name = "debugMenuToolStripMenuItem";
+            this.debugMenuToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
+            this.debugMenuToolStripMenuItem.Text = "Debug Menu";
+            // 
+            // fromStringToolStripMenuItem
+            // 
+            this.fromStringToolStripMenuItem.Name = "fromStringToolStripMenuItem";
+            this.fromStringToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.fromStringToolStripMenuItem.Text = "FromString";
+            this.fromStringToolStripMenuItem.Click += new System.EventHandler(this.fromStringToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.hevriceToolStripMenuItem,
+            this.ordersRunningLowToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.FreeQuery,
+            this.toolStripTextBox1});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(93, 20);
+            this.toolStripMenuItem3.Text = "Saved Queries";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.saveToolStripMenuItem.Text = "&Save";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(179, 6);
+            // 
+            // hevriceToolStripMenuItem
+            // 
+            this.hevriceToolStripMenuItem.Name = "hevriceToolStripMenuItem";
+            this.hevriceToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.hevriceToolStripMenuItem.Text = "Hevrice";
+            this.hevriceToolStripMenuItem.Click += new System.EventHandler(this.hevriceToolStripMenuItem_Click);
+            // 
+            // ordersRunningLowToolStripMenuItem
+            // 
+            this.ordersRunningLowToolStripMenuItem.Name = "ordersRunningLowToolStripMenuItem";
+            this.ordersRunningLowToolStripMenuItem.Size = new System.Drawing.Size(182, 22);
+            this.ordersRunningLowToolStripMenuItem.Text = "Orders Running Low";
+            this.ordersRunningLowToolStripMenuItem.Click += new System.EventHandler(this.ordersRunningLowToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(179, 6);
+            // 
+            // FreeQuery
+            // 
+            this.FreeQuery.Name = "FreeQuery";
+            this.FreeQuery.Size = new System.Drawing.Size(182, 22);
+            this.FreeQuery.Text = "Free Query";
+            // 
+            // toolStripTextBox1
+            // 
+            this.toolStripTextBox1.Name = "toolStripTextBox1";
+            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBox1.Click += new System.EventHandler(this.toolStripTextBox1_Click);
             // 
             // ImprovedSearchForm
             // 
@@ -499,5 +583,15 @@
         private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem debugMenuToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fromStringToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem hevriceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ordersRunningLowToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem FreeQuery;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
     }
 }

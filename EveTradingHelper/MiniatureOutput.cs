@@ -25,19 +25,12 @@ namespace EveTradingHelper
             foreach (Func<KeyValuePair<long, Data.Order>, bool> d in predicates)
                 orders = orders.Where(d).ToArray();
 
-            this.listView1.Items.AddRange(orders.Select(order => order.Value.GenerateMiniatureOutput()).ToArray());
+            this.listView1.Items.AddRange(orders
+                .Select(order => order.Value.GenerateMiniatureOutput())
+                .ToArray());
+
             foreach(ColumnHeader c in this.listView1.Columns)
                 c.Width = -2;
-        }
-
-        private void MiniatureOutput_SizeChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SizeChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

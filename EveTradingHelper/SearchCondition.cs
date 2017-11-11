@@ -48,6 +48,17 @@ namespace EveTradingHelper
         /// </summary>
         private bool greenMode = true;
 
+
+        /// <summary>
+        /// Constructor with Query
+        /// </summary>
+        /// <param name="query">Query</param>
+        public SearchCondition(string query) : this()
+        {
+            this.FromString(query);
+        }
+
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -135,13 +146,28 @@ namespace EveTradingHelper
 
         public override string ToString()
         {
-            return this.QueryType.Text + this.types[this.QueryType.Text].ToString();
+            return this.QueryType.Text + " " + this.types[this.QueryType.Text].ToString();
         }
 
+        public void FromString(string query)
+        {
+            var best_option = this.types
+                .Where(x => query.StartsWith(x.Key))
+                .OrderBy(x => x.Key.Length)
+                .Reverse()
+                .First();
+
+            this.QueryType.SelectedItem = best_option.Key;
+            best_option.Value.FromString(query.Replace(best_option.Key, "").Trim());
+        }
+
+        /// <summary>
+        /// Gets and sets the SearchConditionStatusCode
+        /// </summary>
         public SearchConditionStatusCode CurrentMode
         {
             get { return this.greenMode ? SearchConditionStatusCode.Green : SearchConditionStatusCode.Red; }
-            set { this.greenMode = value == SearchConditionStatusCode.Green ? true : false; }
+            set { this.greenMode = value == SearchConditionStatusCode.Green ? true : false; this.UpdatePictureBox(); }
         }
 
         /// <summary>
@@ -150,10 +176,16 @@ namespace EveTradingHelper
         public void ToggleRedGreen()
         {
             this.greenMode = !this.greenMode;
-
-            this.pictureBox1.Image = this.greenMode ? Properties.Resources.plus : Properties.Resources.minus;
+            this.UpdatePictureBox();
         }
 
+
+        private void UpdatePictureBox()
+        {
+            this.pictureBox1.Image = this.greenMode ? Properties.Resources.plus : Properties.Resources.minus;
+            this.pictureBox1.Invalidate();
+            this.pictureBox1.Update();
+        }
         /// <summary>
         /// This function triggers the SearchFieldUpdate event
         /// </summary>
