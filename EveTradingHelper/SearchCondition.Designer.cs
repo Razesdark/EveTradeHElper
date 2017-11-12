@@ -45,10 +45,10 @@
             // 
             this.searchOptionPanel.Controls.Add(this.QueryType);
             this.searchOptionPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.searchOptionPanel.Location = new System.Drawing.Point(0, 0);
+            this.searchOptionPanel.Location = new System.Drawing.Point(5, 1);
             this.searchOptionPanel.Name = "searchOptionPanel";
-            this.searchOptionPanel.Padding = new System.Windows.Forms.Padding(5, 5, 5, 0);
-            this.searchOptionPanel.Size = new System.Drawing.Size(163, 33);
+            this.searchOptionPanel.Padding = new System.Windows.Forms.Padding(1, 1, 5, 1);
+            this.searchOptionPanel.Size = new System.Drawing.Size(163, 26);
             this.searchOptionPanel.TabIndex = 0;
             // 
             // QueryType
@@ -56,9 +56,9 @@
             this.QueryType.Dock = System.Windows.Forms.DockStyle.Fill;
             this.QueryType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.QueryType.FormattingEnabled = true;
-            this.QueryType.Location = new System.Drawing.Point(5, 5);
+            this.QueryType.Location = new System.Drawing.Point(1, 1);
             this.QueryType.Name = "QueryType";
-            this.QueryType.Size = new System.Drawing.Size(153, 21);
+            this.QueryType.Size = new System.Drawing.Size(157, 21);
             this.QueryType.TabIndex = 0;
             this.QueryType.SelectedIndexChanged += new System.EventHandler(this.SearchQuery_SelectFilter);
             // 
@@ -89,19 +89,19 @@
             // 
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(503, 0);
+            this.panel1.Location = new System.Drawing.Point(505, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.panel1.Size = new System.Drawing.Size(33, 33);
+            this.panel1.Padding = new System.Windows.Forms.Padding(2);
+            this.panel1.Size = new System.Drawing.Size(26, 26);
             this.panel1.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::EveTradingHelper.Properties.Resources.plus;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 5);
+            this.pictureBox1.Location = new System.Drawing.Point(2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 23);
+            this.pictureBox1.Size = new System.Drawing.Size(22, 22);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -109,10 +109,11 @@
             // 
             // BasePanel
             // 
+            this.BasePanel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BasePanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.BasePanel.Location = new System.Drawing.Point(163, 0);
+            this.BasePanel.Location = new System.Drawing.Point(168, 1);
             this.BasePanel.Name = "BasePanel";
-            this.BasePanel.Size = new System.Drawing.Size(340, 33);
+            this.BasePanel.Size = new System.Drawing.Size(337, 26);
             this.BasePanel.TabIndex = 3;
             // 
             // SearchCondition
@@ -125,7 +126,8 @@
             this.Controls.Add(this.IsActiveOptions);
             this.Controls.Add(this.searchOptionPanel);
             this.Name = "SearchCondition";
-            this.Size = new System.Drawing.Size(536, 33);
+            this.Padding = new System.Windows.Forms.Padding(5, 1, 5, 1);
+            this.Size = new System.Drawing.Size(536, 28);
             this.searchOptionPanel.ResumeLayout(false);
             this.IsActiveOptions.ResumeLayout(false);
             this.IsActiveOptions.PerformLayout();

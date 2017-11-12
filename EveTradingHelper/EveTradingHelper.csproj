@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\EVE\Character.cs" />
+    <Compile Include="Data\EVE\ItemImage.cs" />
     <Compile Include="Data\EVE\ItemType.cs" />
     <Compile Include="Data\EVE\Station.cs" />
     <Compile Include="Data\Order.cs" />
@@ -98,6 +99,12 @@
     </Compile>
     <Compile Include="MiniatureOutput.Designer.cs">
       <DependentUpon>MiniatureOutput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OrderView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\OrderView.Designer.cs">
+      <DependentUpon>OrderView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,6 +144,18 @@
     <Compile Include="SearchConditionTypes\WasActiveAtSearch.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\OrderViewListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\OrderViewListItem.Designer.cs">
+      <DependentUpon>OrderViewListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OrderViewRuler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\OrderViewRuler.Designer.cs">
+      <DependentUpon>OrderViewRuler.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MiniatureOutput.resx">
       <DependentUpon>MiniatureOutput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderView.resx">
+      <DependentUpon>OrderView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -158,6 +180,12 @@
     </Compile>
     <EmbeddedResource Include="SearchCondition.resx">
       <DependentUpon>SearchCondition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderViewListItem.resx">
+      <DependentUpon>OrderViewListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OrderViewRuler.resx">
+      <DependentUpon>OrderViewRuler.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="EveTradingHelper_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">

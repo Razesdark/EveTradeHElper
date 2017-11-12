@@ -19,7 +19,14 @@ namespace EveTradingHelper.Data.EVE
 
                 if (!Directory.Exists("typeID.csv"))
                 {
-                    (new WebClient()).DownloadFile("https://www.fuzzwork.co.uk/resources/typeids.csv", "typeID.csv");
+                    try
+                    {
+                        (new WebClient()).DownloadFile("https://www.fuzzwork.co.uk/resources/typeids.csv", "typeID.csv");
+                    }
+                    catch
+                    {
+                        (new WebClient()).DownloadFile("https://raw.githubusercontent.com/Razesdark/EveTradeHelper/a476637fac8ab516c87e0661781f662051780eca/EveTradingHelper/bin/Debug/typeID.csv", "typeID.csv");
+                    }
                 }
 
                 StreamReader sr = new StreamReader(File.Open("typeID.csv", FileMode.Open));

@@ -17,7 +17,7 @@ namespace EveTradingHelper.SearchConditionTypes
 
         protected BasePanel()
         {
-            this.Padding = new Padding(5);
+            this.Padding = new Padding(5, 1, 5, 1);
 
         }
 

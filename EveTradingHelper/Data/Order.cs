@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -276,6 +277,18 @@ namespace EveTradingHelper.Data
             }
 
             return columns.ToArray();
+        }
+
+
+        /// <summary>
+        /// Gets images!!
+        /// </summary>
+        public Image ItemImage
+        {
+            get
+            {
+                return Data.EVE.ItemImage.Instance.GetImageForItem(this.TypeID);
+            }
         }
 
         /// <summary>

@@ -62,27 +62,17 @@ namespace EveTradingHelper
         /// <param name="order">The order to display</param>
         public void ShowOrder(Data.Order order)
         {
-            if (panel2_hidden)
+            if (this.splitContainer1.Panel2.Controls.OfType<OrderView>().Count() == 0)
+                this.splitContainer1.Panel2.Controls.Add(new OrderView(order));
+            else
+                this.splitContainer1.Panel2.Controls.OfType<OrderView>().First().Order = order;
+            
+            if(this.panel2_hidden)
             {
-                foreach (Control c in this.splitContainer1.Panel2.Controls.OfType<Control>().ToArray())
-                {
-                    c.Visible = true;
-                }
-                panel2_hidden = false;
+                this.splitContainer1.Panel2.Show();
+                this.panel2_hidden = false;
             }
-            this.ItemNameLabel.Text = order.Type;
-            this.StationNameLabel.Text = order.Station + " @ " + order.Region;
-            this.ItemPriceLabel.Text = "Price: ISK " + order.Price.ToString("###,00");
-            this.ItemQuantityLabel.Text = (order.IsActive ? order.OrderSizeAt(order.LastSeen).ToString("##0,00") : "0") + " / " + order.InitialOrderSize.ToString("##0,00") + "(" + (100.0 * order.OrderPercentRemaining) + "%)";
-            this.ItemSellerLabel.Text = order.Character;
-            this.orderListView.Items.Clear();
-            this.orderListView.Items.AddRange(order.EntityViewItems());
 
-            this.TotalItemsInOrders.Text = "Items left in all orders: " + Data.Order.Orders
-                .Where(o => o.Value.TypeID == order.TypeID)
-                .Where(o => o.Value.IsActive)
-                .Select(o => o.Value.OrderSizeAt(o.Value.LastSeen))
-                .Sum().ToString("##0,00");
         }
 
         /// <summary>
@@ -191,10 +181,8 @@ namespace EveTradingHelper
 
         }
 
-        private void panel2_SizeChanged(object sender, EventArgs e)
-        {
-            this.panel2.Width = this.panel1.Width / 2;
-        }
+
+
 
         private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
